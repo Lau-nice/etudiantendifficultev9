@@ -1,1 +1,292 @@
-# etudiantendifficultev9
+<body>
+    <!-- Logos CHU de Nice et Université Côte d'Azur -->
+    <div class="logos" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <img src="logo-universite-cote-dazur.png" alt="Logo Université Côte d'Azur" style="height: 50px;">
+        <img src="logo-chu-nice.png" alt="Logo CHU de Nice" style="height: 110px;">
+    </div>
+
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boite à outils pour les internes en difficulté</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #004080;
+            text-align: center; /* Centrer le titre */
+        }
+        .question {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 5px solid #004080;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .answer {
+            margin-top: 10px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+        .close-btn {
+            color: #0066cc;
+            cursor: pointer;
+            float: right;
+            font-size: 0.9em;
+        }
+        .back-btn {
+            margin-top: 20px;
+            display: block;
+            color: #0066cc;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boite à outils pour les internes en difficulté</h1>
+    
+    <!-- Page de sélection -->
+    <div class="question" id="initial-question">
+        <p>Êtes-vous étudiant, coordinateur ou responsable de terrain de stage  ?</p>
+        <div class="answer">
+            <a href="#" onclick="showSection('etudiant')">Étudiant</a> |
+            <a href="#" onclick="showSection('coordinateur')">Coordinateur</a> |
+            <a href="#" onclick="showSection('Responsable de Terrain de Stage ')">Responsable de Terrain de Stage </a>
+        </div>
+    </div>
+
+    <!-- Section pour les étudiants -->
+    <div id="etudiant" class="question hidden">
+        <h2>Vous êtes étudiant <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
+        <p>Quelle est votre situation ?</p>
+        <div class="answer">
+            <a href="#" onclick="showSection('etudiant-pedagogie')">Problème pédagogique</a> |
+            <a href="#" onclick="showSection('etudiant-sante')">Problème de santé</a> |
+            <a href="#" onclick="showSection('etudiant-social')">Problème social</a> |
+            <a href="#" onclick="showSection('etudiant-harcelement')">Harcèlement / Violences sexuelles</a>
+        </div>
+    </div>
+
+    <!-- Sous-sections pour les étudiants -->
+    <div id="etudiant-pedagogie" class="question hidden">
+        <h3>Problème pédagogique <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer son coordinateur</li>
+            <li>Informer son tuteur (si applicable)</li>
+            <li>Contacter l'interne responsable disciplinaire</li>
+            <li> Contacter l’ARS</li>
+            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer le bureau de l’internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+         </ul>
+        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+    </div>
+
+    <div id="etudiant-sante" class="question hidden">
+        <h3>Problème de santé <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter SOS interne:<a href="mailto:sos.ihn06@gmail.com">sos.ihn06@gmail.com</a></li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Contacter la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Possibilité de contacter le psychiatre de garde</li>
+            <li>Possibilité de contacter le <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+            <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+    </div>
+
+    <div id="etudiant-social" class="question hidden">
+        <h3>Problème social <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter l'assistante sociale universitaire: <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
+            <li>Contacter l’assistante sociale du CHU</li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Informer le 3ème cycle de la faculté: <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer le tuteur</li>
+            <li>Possibilité de contacter le <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+    </div>
+
+    <div id="etudiant-harcelement" class="question hidden">
+        <h3>Harcèlement et violences sexuelles <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Possibilité d’informer son tuteur</li>
+            <li>Possibilité d’informer son coordinateur</li>
+            <li> Contacter la Direction des Affaires Medicales</li>
+            <li> Contacter l’ARS</li>
+            <li>Informer le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Bénéficier de l’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
+            <li> Possibilité de faire un signalement en ligne:  <a href=https://univ-cotedazur.fr/universite/responsabilite-ethique-et-universitaire/egalite-femmes-hommes/la-cellule-decoute-et-de-signalement> cellule-decoute-et-de-signalement de l'univ-cotedazur </a>
+            <li>Se rapprocher de la médecine du travail  : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Possibilité de contacter le <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+            <li>Plus d'informations sur:  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.etudiant.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
+            <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+    </div>
+
+    <!-- Section pour les coordinateurs -->
+    <div id="coordinateur" class="question hidden">
+        <h2>Vous êtes coordinateur <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
+        <p>Quelle est votre situation ?</p>
+        <div class="answer">
+            <a href="#" onclick="showSection('coordinateur-pedagogie')">Problème pédagogique</a> |
+            <a href="#" onclick="showSection('coordinateur-sante')">Problème médical</a> |
+            <a href="#" onclick="showSection('coordinateur-social')">Problème social</a> |
+            <a href="#" onclick="showSection('coordinateur-harcelement')">Harcèlement et violences sexuelles</a>
+        </div>
+    </div>
+
+    <!-- Sous-sections pour les coordinateurs -->
+    <div id="coordinateur-pedagogie" class="question hidden">
+        <h3>Problème pédagogique <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer la commission locale de la discipline</li>
+            <li>Informer le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+                </ul>
+            <li>En cas de problème majeur:</li> 
+            <li>Informer la commission locale de la discipline</li>
+            <li>Informer la commission régionale de la discipline</li>
+            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Saisir la commission de suivi des internes</li>
+            <li> Contacter la Direction des Affaires Medicales</li>
+        </ul>
+        <span class="back-btn" onclick="showSection('coordinateur')">Retour</span>
+    </div>
+
+    <div id="coordinateur-sante" class="question hidden">
+        <h3>Problème médical <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Informer le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Contacter la Direction des Affaires Medicales</li>
+            <li>Informer l’interne responsable de la discipline et burreau de l'internat</li>
+            <li>Contacter SOS interne:<a href="mailto:sos.ihn06@gmail.com">sos.ihn06@gmail.com</a></li>
+            <li>Possibilitié de contacter l'assistante sociale du CHU</li>
+            <li>Contacter l'assistante sociale universitaire: <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('coordinateur')">Retour</span>
+    </div>
+
+    <div id="coordinateur-social" class="question hidden">
+        <h3>Problème social <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter l'assistante sociale universitaire: <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
+            <li>Contacter l'assistante sociale du CHU</li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Informer le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('coordinateur')">Retour</span>
+    </div>
+
+    <div id="coordinateur-harcelement" class="question hidden">
+        <h3>Harcèlement et violences sexuelles <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>En cas de suspicion:</li> 
+            <li>Informer la Direction des Affaires Médicales</li>
+            <li>Informer la médecine du travail</li>
+            <li>Informer le 3ème cycle (avec l’accord de la personne concernée): <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer de l’existence de la structure d’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
+            <li>Orienter l’etudiant vers sites d’information:  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.etudiant.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
+                </ul>
+            <li>En cas d'urgence:</li> 
+            <li>Informer la Direction des Affaires Médicales</li>
+            <li>Informer l'ARS</li>
+            <li>Informer la médecine du travail</li>
+            <li>Informer le 3ème cycle (avec l’accord de la personne concernée): <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer de l’existence de la structure d’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
+            <li> Possibilité de faire un signalement en ligne:  <a href=https://univ-cotedazur.fr/universite/responsabilite-ethique-et-universitaire/egalite-femmes-hommes/la-cellule-decoute-et-de-signalement> cellule-decoute-et-de-signalement de l'univ-cotedazur </a>
+            <li>Informer de la possibilité et de l’importance du dépôt de plainte</li> 
+        </ul>
+        <span class="back-btn" onclick="showSection('coordinateur')">Retour</span>
+    </div>
+
+    <!-- Section pour les Responsable de Terrain de Stage  -->
+    <div id="Responsable de Terrain de Stage " class="question hidden">
+        <h2>Vous êtes Responsable de Terrain de Stage  <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
+        <p>Quelle est votre situation ?</p>
+        <div class="answer">
+            <a href="#" onclick="showSection('Responsable de Terrain de Stage -pedagogie')">Problème pédagogique</a> |
+            <a href="#" onclick="showSection('Responsable de Terrain de Stage -sante')">Problème médical</a> |
+            <a href="#" onclick="showSection('Responsable de Terrain de Stage -social')">Problème social</a> |
+            <a href="#" onclick="showSection('Responsable de Terrain de Stage -harcelement')">Harcèlement et violences sexuelles</a>
+        </div>
+    </div>
+
+    <!-- Sous-sections pour les Responsable de Terrain de Stage  -->
+    <div id="Responsable de Terrain de Stage -pedagogie" class="question hidden">
+        <h3>Problème pédagogique <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer le coordinateur de la discipline</li>
+            <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Saisir la commission de suivi des internes</li>
+        </ul>
+        <span class="back-btn" onclick="showSection('Responsable de Terrain de Stage ')">Retour</span>
+    </div>
+
+    <div id="Responsable de Terrain de Stage -sante" class="question hidden">
+        <h3>Problème médical <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Contacter la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Contacter SOS interne</li>
+            <li>Informer l’interne responsable de la discipline</li>     
+        </ul>
+        <span class="back-btn" onclick="showSection('Responsable de Terrain de Stage ')">Retour</span>
+    </div>
+
+    <div id="Responsable de Terrain de Stage -social" class="question hidden">
+        <h3>Problème social <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter l'assistante sociale du CHU</li>
+            <li>Contacter l'assistante sociale universitaire: <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('Responsable de Terrain de Stage ')">Retour</span>
+    </div>
+
+    <div id="Responsable de Terrain de Stage -harcelement" class="question hidden">
+        <h3>Harcèlement et violences sexuelles <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer le coordinateur</li>
+            <li>Informer la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Informer de l’existence de la structure d’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('Responsable de Terrain de Stage ')">Retour</span>
+    </div>
+
+    <script>
+        function showSection(id) {
+            // Masquer toutes les sections
+            var sections = document.querySelectorAll('.question');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+
+            // Afficher la section demandée
+            var sectionToShow = document.getElementById(id);
+            if (sectionToShow) {
+                sectionToShow.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
