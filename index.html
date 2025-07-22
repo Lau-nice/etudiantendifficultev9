@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boite à outils pour les internes en difficulté</title>
+    <title>Boite à outils pour les étudiants en difficulté</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,21 +57,22 @@
     </style>
 </head>
 <body>
-    <h1>Boite à outils pour les internes en difficulté</h1>
+    <h1>Boite à outils pour les étudiants en difficulté</h1>
     
     <!-- Page de sélection -->
     <div class="question" id="initial-question">
-        <p>Êtes-vous interne, coordonnateur ou responsable de terrain de stage  ?</p>
+        <p>Êtes-vous étudiant en santé, interne, coordonnateur ou responsable de terrain de stage  ?</p>
         <div class="answer">
-            <a href="#" onclick="showSection('etudiant')">Interne</a> |
+            <a href="#" onclick="showSection('etudiant')">Etudiant en santé</a> |
+            <a href="#" onclick="showSection('interne')">Interne</a> |
             <a href="#" onclick="showSection('coordonnateur')">Coordonnateur</a> |
             <a href="#" onclick="showSection('Responsable de Terrain de Stage ')">Responsable de Terrain de Stage </a>
         </div>
     </div>
 
-    <!-- Section pour les étudiants -->
+    <!-- Section pour les etudiants -->
     <div id="etudiant" class="question hidden">
-        <h2>Vous êtes interne <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
+        <h2>Vous êtes étudiant en santé <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
         <p>Quelle est votre situation ?</p>
         <div class="answer">
             <a href="#" onclick="showSection('etudiant-pedagogie')">Problème pédagogique</a> |
@@ -81,18 +82,14 @@
         </div>
     </div>
 
-    <!-- Sous-sections pour les étudiants -->
+    <!-- Sous-sections pour les etudiants -->
     <div id="etudiant-pedagogie" class="question hidden">
         <h3>Problème pédagogique <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
         <ul>
-            <li>Contacter l'interne responsable disciplinaire</li>
-            <li>Informer son responsable de terrain de stage (RTS)</li>
-            <li>Informer son coordonnateur : <a href= https://medecine.univ-cotedazur.fr/internat/coordonnateurs>la liste est disponible ici </a></li>
-            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des Etudiants</a></li>
-            <li>Contacter l’ARS: <a href="mailto:ARS-PACA-DOS-INTERNAT@ars.sante.fr">ARS-PACA-DOS-INTERNAT@ars.sante.fr</a></li>
-            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
-            <li>Informer le bureau de l’internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
-         </ul>
+            <li>Contacter la scolarité : <a href="mailto:medecine.scolarite.cycle2@univ-cotedazur.fr">medecine.scolarite.cycle2@univ-cotedazur.fr</a></li>
+            <li>Plus d'information sur la scolarité <a href=https://medecine.univ-cotedazur.fr/etudes/medecine/scolarite>Scolarité de la faculté de Médecine</a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des étudiants</a></li>
+        </ul>
         <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
     </div>
 
@@ -101,13 +98,11 @@
         <ul>
             <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
             <li>Possibilité de prendre un RDV médical au <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
-            <li>Contacter SOS interne :<a href="mailto:sos.ihn06@gmail.com"> sos.ihn06@gmail.com</a></li>
-            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
-            <li>Contacter la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
-            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
-            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des Etudiants</a></li>
+            <li>Contacter la scolarité du 2ème cycle : <a href="mailto:medecine.scolarite.cycle2@univ-cotedazur.fr">medecine.scolarite.cycle2@univ-cotedazur.fr</a></li>
+            <li>Possibilité de contacter le <a href=https://www.chu-nice.fr/offre-de-soins/femme-mere-enfant/gynecologie/>Service de gynécologie du CHU</a></li> 
             <li>Possibilité de contacter le<a href=https://www.bapunice.org > Bureau d'Aide Psychologique Universitaire</a></li>
             <li>Possibilité de contacter la ligne d’écoute psychologique du CHU <a href="tel:0805389878"> au 0 805 38 98 78</a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des étudiants</a></li>
         </ul>
         <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
     </div>
@@ -115,11 +110,8 @@
     <div id="etudiant-social" class="question hidden">
         <h3>Problème social <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
         <ul>
-            <li>Informer le responsable de terrain de stage (RTS)</li>
             <li>Contacter l'assistante sociale universitaire : <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
-            <li>Contacter l’assistante sociale du CHU : <a href="mailto:ssp-cgos@chu-nice.fr">ssp-cgos@chu-nice.fr</a></li>
-            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
-            <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer le 2ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle2@univ-cotedazur.fr">medecine.scolarite.cycle2@univ-cotedazur.fr</a></li>
             <li>Possibilité de contacter le <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
         </ul>
         <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
@@ -129,22 +121,94 @@
         <h3>Harcèlement, violences sexistes et sexuelles <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
         <ul>
             <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
+            <li>Informer la scolarité du 2ème cycle : <a href="mailto:medecine.scolarite.cycle2@univ-cotedazur.fr">medecine.scolarite.cycle2@univ-cotedazur.fr</a></li>
+            <li>Bénéficier de l’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
+            <li>Possibilité de faire un signalement en ligne :  <a href=https://univ-cotedazur.fr/universite/responsabilite-ethique-et-universitaire/egalite-femmes-hommes/la-cellule-decoute-et-de-signalement> cellule-decoute-et-de-signalement de l'univ-cotedazur </a>
+            <li>Possibilité de prendre un RDV médical au <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+            <li>Possibilité de contacter le CHU 24h/24h et 7j/7 pour les urgences violences faites aux femmes et agressions sexuelles<a href="tel:0492036395"> au 04 92 03 63 95</a></li>
+            <li>Possibilité de contacter le<a href=https://www.bapunice.org > Bureau d'Aide Psychologique Universitaire</a></li>
+            <li>Possibilité de contacter la ligne d’écoute psychologique du CHU <a href="tel:0805389878"> au 0 805 38 98 78</a></li>
+            <li>Possibilité d'un dépôt de plainte :<a href=https://www.service-public.fr/particuliers/vosdroits/F1435> plus d'informations ici </a> 
+        </ul>
+        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+    </div>
+    <!-- Section pour les interne -->
+    <div id="interne" class="question hidden">
+        <h2>Vous êtes interne <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h2>
+        <p>Quelle est votre situation ?</p>
+        <div class="answer">
+            <a href="#" onclick="showSection('interne-pedagogie')">Problème pédagogique</a> |
+            <a href="#" onclick="showSection('interne-sante')">Problème de santé</a> |
+            <a href="#" onclick="showSection('interne-social')">Problème social</a> |
+            <a href="#" onclick="showSection('interne-harcelement')">Harcèlement, violences sexistes et sexuelles</a>
+        </div>
+    </div>
+
+    <!-- Sous-sections pour les interne -->
+    <div id="interne-pedagogie" class="question hidden">
+        <h3>Problème pédagogique <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Contacter l'interne responsable disciplinaire</li>
+            <li>Informer son responsable de terrain de stage (RTS)</li>
+            <li>Informer son coordonnateur : <a href= https://medecine.univ-cotedazur.fr/internat/coordonnateurs>la liste est disponible ici </a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-internee/commission-de-suivi>Comission de Suivi des interne</a></li>
+            <li>Contacter l’ARS: <a href="mailto:ARS-PACA-DOS-INTERNAT@ars.sante.fr">ARS-PACA-DOS-INTERNAT@ars.sante.fr</a></li>
+            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Informer le bureau de l’internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+         </ul>
+        <span class="back-btn" onclick="showSection('interne')">Retour</span>
+    </div>
+
+    <div id="interne-sante" class="question hidden">
+        <h3>Problème de santé <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
+            <li>Possibilité de prendre un RDV médical au <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+            <li>Contacter SOS interne :<a href="mailto:sos.ihn06@gmail.com"> sos.ihn06@gmail.com</a></li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Contacter la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
+            <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Possibilité de contacter le <a href=https://www.chu-nice.fr/offre-de-soins/femme-mere-enfant/gynecologie/>Service de gynécologie du CHU</a></li> 
+            <li>Possibilité de contacter le<a href=https://www.bapunice.org > Bureau d'Aide Psychologique Universitaire</a></li>
+            <li>Possibilité de contacter la ligne d’écoute psychologique du CHU <a href="tel:0805389878"> au 0 805 38 98 78</a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-internee/commission-de-suivi>Comission de Suivi des interne</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('interne')">Retour</span>
+    </div>
+
+    <div id="interne-social" class="question hidden">
+        <h3>Problème social <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>Informer le responsable de terrain de stage (RTS)</li>
+            <li>Contacter l'assistante sociale universitaire : <a href="mailto:service-social.pasteur@univ-cotedazur.fr">service-social.pasteur@univ-cotedazur.fr</a></li>
+            <li>Contacter l’assistante sociale du CHU : <a href="mailto:ssp-cgos@chu-nice.fr">ssp-cgos@chu-nice.fr</a></li>
+            <li>Informer le bureau de l'internat : <a href="mailto:president.beihn@gmail.com">president.beihn@gmail.com</a></li>
+            <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
+            <li>Possibilité de contacter le <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+        </ul>
+        <span class="back-btn" onclick="showSection('interne')">Retour</span>
+    </div>
+
+    <div id="interne-harcelement" class="question hidden">
+        <h3>Harcèlement, violences sexistes et sexuelles <span class="close-btn" onclick="showSection('initial-question')">Fermer</span></h3>
+        <ul>
+            <li>En cas d'urgence, <a href="tel:15">composez le 15</a></li>
             <li>Possibilité d’informer son responsable de terrain de stage (RTS)</li>
             <li>Informer son coordonnateur : <a href= https://medecine.univ-cotedazur.fr/internat/coordonnateurs>la liste est disponible ici </a></li>
             <li> Contacter la Direction des Affaires Medicales : <a href="mailto:affaires-medicales@chu-nice.fr">affaires-medicales@chu-nice.fr</a></li>
             <li> Contacter l’ARS: <a href="mailto:ARS-PACA-DOS-INTERNAT@ars.sante.fr">ARS-PACA-DOS-INTERNAT@ars.sante.fr</a></li>
             <li>Informer le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
             <li>Bénéficier de l’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
-            <li> Possibilité de faire un signalement en ligne :  <a href=https://univ-cotedazur.fr/universite/responsabilite-ethique-et-universitaire/egalite-femmes-hommes/la-cellule-decoute-et-de-signalement> cellule-decoute-et-de-signalement de l'univ-cotedazur </a>
+            <li>Possibilité de faire un signalement en ligne :  <a href=https://univ-cotedazur.fr/universite/responsabilite-ethique-et-universitaire/egalite-femmes-hommes/la-cellule-decoute-et-de-signalement> cellule-decoute-et-de-signalement de l'univ-cotedazur </a>
             <li>Se rapprocher de la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
             <li>Possibilité de prendre un RDV médical au <a href=https://univ-cotedazur.fr/vie-des-campus/sante-aide-sociale>Centre de Santé Universitaire</a></li>
+            <li>Possibilité de contacter le CHU 24h/24h et 7j/7 pour les urgences violences faites aux femmes et agressions sexuelles<a href="tel:0492036395"> au 04 92 03 63 95</a></li>
             <li>Possibilité de contacter le<a href=https://www.bapunice.org > Bureau d'Aide Psychologique Universitaire</a></li>
             <li>Possibilité de contacter la ligne d’écoute psychologique du CHU <a href="tel:0805389878"> au 0 805 38 98 78</a></li>
             <li>Possibilité d'un dépôt de plainte :<a href=https://www.service-public.fr/particuliers/vosdroits/F1435> plus d'informations ici </a> 
-            <li>Plus d'informations sur :  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.etudiant.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
-
+            <li>Plus d'informations sur :  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.interne.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
         </ul>
-        <span class="back-btn" onclick="showSection('etudiant')">Retour</span>
+        <span class="back-btn" onclick="showSection('interne')">Retour</span>
     </div>
 
     <!-- Section pour les coordonnateurs -->
@@ -170,7 +234,7 @@
             <li>Informer la commission locale de la discipline</li>
             <li>Informer la commission régionale de la discipline</li>
             <li>Contacter le 3ème cycle : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
-            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des Etudiants</a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-internee/commission-de-suivi>Comission de Suivi des interne</a></li>
             <li>Contacter la Direction des Affaires Medicales : <a href="mailto:affaires-medicales@chu-nice.fr">affaires-medicales@chu-nice.fr</a></li>
         </ul>
         <span class="back-btn" onclick="showSection('coordonnateur')">Retour</span>
@@ -209,7 +273,7 @@
             <li>Informer la médecine du travail : <a href="mailto:medecine.sante.au.travail@chu-nice.fr">medecine.sante.au.travail@chu-nice.fr</a></li>
             <li>Informer le 3ème cycle (avec l’accord de la personne concernée) : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
             <li>Informer de l’existence de la structure d’aide universitaire : <a href="mailto:cvss@univ-cotedazur.fr">cvss@univ-cotedazur.fr</a></li>
-            <li>Orienter l’etudiant vers sites d’information :  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.etudiant.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
+            <li>Orienter l’interne vers sites d’information :  <a href=https://isni.fr> isni.fr </a>  et <a href=https://www.interne.gouv.fr/fr/cnae> cnae-santé.fr </a> et <a href=https://www.beihn.com/sos-ihn> bureau elargi des internes </a>
         </ul>
             <li>En cas d'urgence:</li> 
             <li>Contacter la Direction des Affaires Medicales : <a href="mailto:affaires-medicales@chu-nice.fr">affaires-medicales@chu-nice.fr</a></li>
@@ -241,7 +305,7 @@
         <ul>
             <li>Informer le coordonnateur de la discipline : <a href= https://medecine.univ-cotedazur.fr/internat/coordonnateurs>la liste est disponible ici </a></li>
             <li>Informer le 3ème cycle de la faculté : <a href="mailto:medecine.scolarite.cycle3@univ-cotedazur.fr">medecine.scolarite.cycle3@univ-cotedazur.fr</a></li>
-            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-etudiante/commission-de-suivi>Comission de Suivi des Etudiants</a></li>
+            <li>Possibilité de saisir la <a href=https://medecine.univ-cotedazur.fr/vie-internee/commission-de-suivi>Comission de Suivi des interne</a></li>
         </ul>
         <span class="back-btn" onclick="showSection('Responsable de Terrain de Stage ')">Retour</span>
     </div>
